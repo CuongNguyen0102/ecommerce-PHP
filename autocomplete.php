@@ -24,6 +24,6 @@ foreach ($results as $product) {
         'id' => $product['id']       // ID sản phẩm
     ];
 }
-
+//NguyenMinhCuong
 echo json_encode($response);
 ?>
