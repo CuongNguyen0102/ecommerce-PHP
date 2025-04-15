@@ -6,6 +6,7 @@ $database = new Database();
 $conn = $database->getConnection();
 
 // Lấy từ khóa tìm kiếm từ yêu cầu GET (nếu có)
+//NguyenMinhCuong
 $search = isset($_GET['q']) ? trim($_GET['q']) : '';
 $category_id = isset($_GET['category']) ? (int)$_GET['category'] : 0;
 $min_price = isset($_GET['min_price']) ? (float)$_GET['min_price'] : 0;
@@ -13,6 +14,7 @@ $max_price = isset($_GET['max_price']) ? (float)$_GET['max_price'] : 0;
 $sort = isset($_GET['sort']) ? $_GET['sort'] : 'newest';
 
 // Lấy danh sách danh mục
+//NguyenMinhCuong
 $stmt = $conn->query("SELECT * FROM categories ORDER BY name");
 $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
